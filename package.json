@@ -1,0 +1,22 @@
+{
+  "name": "tdatw-wiki",
+  "description": "A guide to the story world of the dirt & the water",
+  "version": "0.1.0",
+  "repository": {
+    "url": "git://github.com/mossyowl/tdatw-wiki.git"
+  },
+  "main": "",
+  "scripts": {
+    "bundle-js": "browserify assets/app.js -o assets/dist/bundle.js -t brfs",
+    "bundle": "npm run bundle-js",
+    "watch-js": "watchify assets/app.js -o assets/dist/bundle.js -t brfs",
+    "watch": "npm run watch-js",
+    "start": "jekyll serve -w"
+  },
+  "dependencies": {
+    "brfs": "^1.2.0",
+    "browserify": "^5.9.1",
+    "watchify": "^1.0.1"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,17 @@
+---
+title: Topics
+layout: page
+permalink: /topics/
+---
+
+<div class="item-list topics">
+  {% for topic in site.topics %}
+  <div class="item topic" id="{{ topic.slug }}">
+    <div class="item-date">{{ topic.date | date: "%-d %B %Y" }}</div>
+    <h2 class="item-title"><a href="{{ topic.url }}">{{ topic.title }}</a></h2>
+    <div class="item-excerpt">
+      {{ topic.excerpt | strip_html | truncate: 250 }}
+    </div>
+  </div>
+  {% endfor %}
+</div>

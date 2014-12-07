@@ -1,0 +1,17 @@
+---
+title: Things
+layout: page
+permalink: /things/
+---
+
+<div class="item-list things">
+  {% for thing in site.things %}
+  <div class="item thing" id="{{ thing.slug }}">
+    <div class="item-date">{{ thing.date | date: "%-d %B %Y" }}</div>
+    <h2 class="item-title"><a href="{{ thing.url }}">{{ thing.title }}</a></h2>
+    <div class="item-excerpt">
+      {{ thing.excerpt | strip_html | truncate: 250 }}
+    </div>
+  </div>
+  {% endfor %}
+</div>

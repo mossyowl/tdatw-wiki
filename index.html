@@ -1,0 +1,20 @@
+---
+layout: page
+---
+
+<div class="container">
+  <h1 class="post-title">Updates about the wiki</h1>
+  
+  <div class="posts">
+    {% for post in site.posts limit: 5 %}
+      <div class="post" id="{{ post.slug }}">
+        <p class="meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author.name }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
+        <h2 class="post-title"><a href="{{post.url}}">{{ post.title }}</a></h2>
+        
+        <div class="post-excerpt">
+          {{ post.excerpt | strip_html | truncate: 250 }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

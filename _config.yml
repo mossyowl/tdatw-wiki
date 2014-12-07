@@ -1,0 +1,35 @@
+# Site settings
+title: "td&tw wiki"
+description: "A guide to the story world of The Dirt & The Water."
+baseurl: ""
+url: ""
+twitter_username: t_d_a_t_w
+github_username: tdatw
+google_analytics:
+
+collections:
+  people:
+    output: true
+    permalink: /people/:path/
+  places:
+    output: true
+    permalink: /places/:path/
+  events:
+    output: true
+    permalink: /events/:path/
+  groups:
+    output: true
+    permalink: /groups/:path/
+  things:
+    output: true
+    permalink: /things/:path
+  flora:
+    output: true
+    permalink: /flora/:path
+  fauna:
+    output: true
+    permalink: /fauna/:path
+
+permalink: /posts/:title/
+markdown: kramdown
+exclude: [node_modules]

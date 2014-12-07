@@ -1,0 +1,17 @@
+---
+title: Flora
+layout: page
+permalink: /flora/
+---
+
+<div class="item-list flora">
+  {% for flora in site.flora %}
+  <div class="item flora-single" id="{{ flora.slug }}">
+    <div class="item-date">{{ flora.date | date: "%-d %B %Y" }}</div>
+    <h2 class="item-title"><a href="{{ flora.url }}">{{ flora.title }}</a></h2>
+    <div class="item-excerpt">
+      {{ flora.excerpt | strip_html | truncate: 250 }}
+    </div>
+  </div>
+  {% endfor %}
+</div>

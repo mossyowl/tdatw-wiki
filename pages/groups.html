@@ -1,0 +1,17 @@
+---
+title: Groups
+layout: page
+permalink: /groups/
+---
+
+<div class="item-list groups">
+  {% for group in site.groups %}
+  <div class="item group" id="{{ group.slug }}">
+    <div class="item-date">{{ group.date | date: "%-d %B %Y" }}</div>
+    <h2 class="item-title"><a href="{{ group.url }}">{{ group.title }}</a></h2>
+    <div class="item-excerpt">
+      {{ group.excerpt | strip_html | truncate: 250 }}
+    </div>
+  </div>
+  {% endfor %}
+</div>

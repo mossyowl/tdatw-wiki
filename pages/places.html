@@ -1,0 +1,17 @@
+---
+title: Places
+layout: page
+permalink: /places/
+---
+
+<div class="item-list places">
+  {% for place in site.places %}
+  <div class="item place" id="{{ place.slug }}">
+    <div class="item-date">{{ place.date | date: "%-d %B %Y" }}</div>
+    <h2 class="item-title"><a href="{{ place.url }}">{{ place.title }}</a></h2>
+    <div class="item-excerpt">
+      {{ place.excerpt | strip_html | truncate: 250 }}
+    </div>
+  </div>
+  {% endfor %}
+</div>

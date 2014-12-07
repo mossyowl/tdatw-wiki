@@ -1,0 +1,17 @@
+---
+title: Fauna
+layout: page
+permalink: /fauna/
+---
+
+<div class="item-list fauna">
+  {% for fauna in site.fauna %}
+  <div class="item fauna-single" id="{{ fauna.slug }}">
+    <div class="item-date">{{ fauna.date | date: "%-d %B %Y" }}</div>
+    <h2 class="item-title"><a href="{{ fauna.url }}">{{ fauna.title }}</a></h2>
+    <div class="item-excerpt">
+      {{ fauna.excerpt | strip_html | truncate: 250 }}
+    </div>
+  </div>
+  {% endfor %}
+</div>
